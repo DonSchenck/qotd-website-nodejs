@@ -128,7 +128,9 @@ if (mybutton) {
         console.log('Attempting to retrieve a random quote...');
 		var x = document.getElementById('mycard');
 		var q = await getQuote();
-		x.innerHTML = '"' + q.quotation + '" - ' + q.author;
+		if (x !== null) {
+			x.innerHTML = '"' + q.quotation + '" - ' + q.author;
+		} 
         // You can add more logic here
     });
 }
