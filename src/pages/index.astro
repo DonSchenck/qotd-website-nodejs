@@ -107,7 +107,8 @@ import Card from '../components/Card.astro';
 
 async function getQuote(): Promise<Quote> {
   try {
-    const response = fetch('https://qotd-csharp-rhn-engineering-dsch-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/quotes/random');
+    //const response = fetch('https://qotd-csharp-rhn-engineering-dsch-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/quotes/random');
+	const response = fetch('##QOTD_API_URL##');
     if (!response) {
       throw new Error('Network response was not ok');
     }
