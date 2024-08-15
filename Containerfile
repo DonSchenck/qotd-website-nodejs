@@ -18,7 +18,7 @@ COPY container_run.sh .
 # start Nginx in the foreground when the container is run
 RUN chmod +x ./container_run.sh
 RUN chmod 777 ./
-RUN chown -R 1001:0 /usr/share/nginx/html
+RUN chmod 777 /usr/share/nginx/html
 RUN chown -R 1001:0 /var/cache/nginx && chmod -R ug+rwx /var/cache/nginx && chown -R 1001:0 /var/run
 RUN chown -R 1001:0 /run
 
